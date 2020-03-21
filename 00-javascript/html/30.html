@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // var obj = {
+        //     age:25,
+        //     show(){
+        //         function run(){
+        //             console.log(this);
+        //         }
+        //         run();
+        //     }//{age: 25, show: ƒ}
+        // };
+
+        // obj.show();
+
+        // var obj = {
+        //     name:'二狗',
+        //     sex:'男'
+        // };
+
+        // var obj1 = {
+        //     age:25,
+        //     showname(){
+        //         console.log(1);
+        //     },
+        //     __proto__:obj
+        // };
+        // var json = {};
+        // for( key in obj1 ){
+        //     json[key] = obj1[key];
+        // }
+        // console.log(json)//{age: 25, showname: ƒ, name: "二狗", sex: "男"}
+        // console.log( obj1.propertyIsEnumerable('showname/age') );//true
+        // console.log( obj1.propertyIsEnumerable('name/sex') );//false
+
+        // var obj = {
+        //     _name:'二狗',
+        //     // get name(){
+        //     //     return this._name;
+        //     // },
+        //     // set name(val){
+        //     //     this._name = val;
+        //     //     console.log(val);
+        //     // }
+        // };
+        // obj.__defineSetter__('name',function(val){this._name = val;});
+        // obj.__defineGetter__('name',function(){return this._name});
+
+        // console.log( obj.name );//二狗
+
+        // obj.name = '旺财';
+        // console.log(obj.name);//旺财
+
+
+
+        // // console.log(obj.__lookupGetter__('name'));//ƒ (){return this._name}
+        // // console.log(obj.__lookupGetter__('name'));//ƒ (){return this._name}
+
+        // console.log(obj.__lookupGetter__('name')());
+
+        // var obj = {
+        //     name:'ergou'
+        // };
+
+        // Object.defineProperty(obj,'age',{
+        //     value:20,
+        //     // writable:false,//是否可写，可修改
+        //     // enumerable:false,//是否可枚举
+        //     // configurable:false//是否可配置（删除）
+        // });
+
+        // console.log(obj);
+        // obj.age = 10;
+        // console.log(obj);//结果表示不可修改
+        // console.log(obj.propertyIsEnumerable('age' ) );//不可枚举
+        // delete obj.age;
+        // console.log(obj)//不可删除
+
+
+        // console.log(obj);
+        // obj.name = 10;
+        // console.log(obj);//结果表示可以修改
+        // console.log(obj.propertyIsEnumerable('name' ) );//可枚举
+        // delete obj.name;
+        // console.log(obj)//可以删除
+
+        // var obj = {};
+        // Object.defineProperties(obj,{
+        //     name:{
+        //         value:'二狗',
+        //         writable:true,
+        //         enumerable:true
+        //     },
+        //     age:{
+        //         value:20,
+        //         configurable:true
+        //     },
+        //     sex:{
+        //         value:'男'
+        //     }
+        // });
+        // console.log(obj);//{name: "二狗", age: 20, sex: "男"}
+
+        // var obj = {};
+        // Object.defineProperties(obj,{
+        //     _name:{
+        //         value:'ergou',
+        //         writable:true
+        //     },
+        //     name:{
+        //         get(){
+        //             return this._name;
+        //         },
+        //         set(val){
+        //             this._name = val;
+        //         }
+        //     }
+        // });
+        // obj.name;
+        // console.log(obj.name);
+        // obj.name = '旺财';
+        // console.log(obj.name);
+
+
+        // var obj = {
+        //     name:'二狗'
+        // };
+        // console.log(Object.getOwnPropertyDescriptor(obj,'name') ) ;//{value: "二狗", writable: true, enumerable: true, configurable: true}
+
+        // var obj = {
+        //     name:'二狗',
+        //     age:20
+        // };
+        // var json = {
+        //     sex:'男',
+        //     __proto__:obj
+        // };
+        // console.log(Object.keys(json) );//["sex"]
+        // console.log(Object.getOwnPropertyNames(json) );//["sex"]
+
+        // var json = {
+        //     big:6,
+        //     has:666
+        // }
+        // var obj = Object.create(json,{
+        //     name:{
+        //         value:'二狗'
+        //     },
+        //     age:{
+        //         value:20
+        //     },
+        //     sex:{
+        //         value:'男'
+        //     }
+        // });
+        // console.log(obj);
+
+
+        //v//ar obj = {
+            //big:6,
+            // has:666
+        // };
+        // console.log(Object.isExtensible(json));
+        // Object.preventExtensions(json);
+        // console.log(Object.isExtensible(json));
+
+        // Object.seal(obj);
+        // console.log(Object.isFrozen(obj) );//false
+        // Object.freeze(obj);
+        // console.log(Object.isFrozen(obj) );//true
+
+        // obj.big = 555;
+        // console.log(obj);//不可修改
+        // obj.name = '二狗';
+        // console.log(obj);//不可添加
+        // delete obj.has;
+        // console.log(obj);//不可删除
+
+        // var  a =  2;//预解析，首先获取到var a = undefined,然后再将函数获取到，顶替前面的那个a = undefined，之后 正式解析，获取到a  =2 替换掉前面的a = function，故最后a的值为2.
+        // function a(){
+        //     console.log(1);
+        // }
+        // console.log(a);
+        // var  a =  2;
+        // a();
+
+    </script>
+</html>

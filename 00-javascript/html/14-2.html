@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style>
+            #box{
+                width:100px;
+                height:100px;
+                background-color:green;
+                position:absolute;
+                left:0;
+                top:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+    <script src='../js封装/callback.js'></script>
+    <script>
+        var oBox = document.getElementById('box');
+
+        callbacks( oBox,{left:'200px'},2000,function(){
+            callbacks( oBox,{top:'200px'},2000,function(){
+                callbacks( oBox,{left:0},2000,function(){
+                    callbacks( oBox,{top:'400px'},2000,function(){alert(1)});
+                });
+            });
+        });
+    </script>
+</html>

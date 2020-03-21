@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style>
+            #box{
+                width:100px;
+                height:100px;
+                background-color:green;
+                position:absolute;
+                left:0;
+                opacity:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+    <script src='../js封装/animation()时间版框架.js'></script>
+    <script>
+        // var num=0;
+        // function fn(){
+        //     num++;
+        //     console.log(num);
+        // }
+        // requestAnimationFrame(fn);
+
+        // var num=0;
+        // (function fn(){
+        //     num++;
+        //     console.log(num);
+        //     requestAnimationFrame(fn);
+        // })();
+
+        // var num=0;
+        // function fn(){
+        //     num++;
+        //     document.title=num;
+        //     setTimeout(fn);
+        // }
+        // fn();
+
+        // var num=0;
+        // (function fn(){
+        //     num++;
+        //     console.log(num);
+        //     requestAnimationFrame(fn);
+        // })();
+
+        // window.requestAnimationFrame = window.requestAnimation || function(fn){
+        //     return setTimeout( fn,1000/30);
+        // };
+        // window.cancelAnimationFrame = window.cancelAnimation || clearTimeout;
+        // var num=0;
+        // var timer;1
+        // function fn(){
+        //     num++;
+        //     timer = window.requestAnimationFrame(fn);
+        //     if(num>=100){
+        //         //num=100;
+        //         window.cancelAnimationFrame(timer);
+        //     }
+        //     document.title=num;
+        //     console.log(num );
+        // }
+        // fn();
+
+        var oBox=document.getElementById('box');
+
+        animation(oBox,'left','800px',10000);
+        animation( oBox,'opacity',1,10000);
+
+        // animation( oBox,'left','800px',10);
+        // animation( oBox,'opacity',1,0.02);
+        // function animation( obj,attr,target,speed){
+        //     var init=parseFloat(getStyle( obj,attr ) );//获取初始值
+        //     target = parseInt( target );
+
+        //     var unit='';
+        //     if(attr !='opacity'){
+        //         unit = 'px';
+        //     }
+        //     (function run(){
+        //         init += speed;
+        //         if( Math.abs(init - target )<= Math.abs(speed) ){
+        //             init=target;
+        //         }else{
+        //             requestAnimationFrame(run);
+        //         }
+        //         obj.style[attr] =init +unit;
+        //     })();
+
+        // }
+
+        // function getStyle( obj,attr ){
+        //     return window.getComputedStyle?window.getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+        // }
+
+        // function animation( obj,attr,target,duration){
+        //     var init = parseFloat( getStyle( obj,attr ) );
+        //     var target = parseFloat( target ) - init;//获取到路程
+
+        //     var init_t= new Date();//获取到执行函数animation时的本地时间
+
+        //     var unit = '';
+        //     if( attr != 'opacity' ){
+        //         unit = 'px';
+        //     }
+        //     (function request(){
+        //         var  run_t = new Date() - init_t;//new Date是用来获取在运动到某一个点时的时间
+        //         //，差值就是运动的时间
+        //         var prop = run_t/duration;//获取到运动时间和总时间的比例
+        //         var val = prop*target;//获取到已经运动了的路程
+        //         if( prop >= 1 ){
+        //             prop = 1;
+        //         }else{
+        //             window.requestAnimationFrame( request );
+        //         }
+        //         obj.style[attr] = init + val + unit;
+        //     })();
+        // }
+
+
+    </script>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+    </head>
+    <body>
+        <div id="box">
+            <!-- <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul> -->
+        </div>
+    </body>
+    <script src='js/jQuery.js'></script>
+    <script>
+        // var oBox = document.getElementById('box');
+        // console.log(typeof oBox);//object
+        // var arr=[];
+        // console.log( typeof arr);//object
+
+        // console.log( $.type( $('#box')))//object
+        // var arr = [];
+        // console.log($.type(arr));//array
+//$.each
+    // //遍历对象
+    // $.each($('li'),function(index,value){
+    //     console.log(value,index);
+    //     //此时打印的是$('li')的html和下标
+    // })
+    //遍历数组
+        // var arr = [5,8];
+        // $.each(arr,function(index,value){
+        //     console.log(index,value);
+        //     //index为数组的下标，value为数组的值
+        // });
+
+//$.proxy()
+        // var obj = {name:'二狗'};
+        // function fn(){
+        //     console.log(this);
+        // }
+
+        // var proxy= $.proxy(fn,obj);//这个相当于bind，不会主动执行
+        // console.log(proxy);//会返回一个代理函数
+        // proxy();//{name: "二狗"}
+        //表示已经改变了this 的指向。
+
+        // var obj={
+        //     age:20,
+        //     show:function(){
+        //         console.log(this);
+        //     },
+        //     void:{
+        //         showname:function(){
+
+        //         }
+        //     }
+        // }
+        // var proxy=$.proxy(obj,'show');
+        // proxy();//{age: 20, show: ƒ}
+
+        // $(document).click(proxy);
+        //点击了就触发了show函数，且将其this改为了obj
+
+
+//$.noConflict
+        // var a=$.noConflict();
+        // console.log(a,$)//a为jQuery函数，$为undefined
+        // console.log(jQuery);//jQuery函数
+
+        // var a=$.noConflict(true);
+        // console.log(a,$)//a为jQuery函数，$为undefined
+        // console.log(jQuery);//undefined
+
+//注意：下面的内容得在服务器的状态下运行。
+//load
+    //加载txt
+        // $(document).click(function(){
+        //     $('#box').load('data.txt',function(res,status,xhr){
+        //         console.log(res,status,xhr);
+        //     });
+        // })
+
+    //加载html。
+        //全部加载
+        // $(document).click(function(){
+        //     $('#box').load('data.html',function(res,status,xhr){
+        //         console.log(res,status,xhr);
+        //     });
+        // })
+        //碎片加载
+        // $(document).click(function(){
+        //     $('#box').load('data.html? ul',function(res,status,xhr){
+        //         console.log(res,status,xhr);
+        //     });
+        // })
+
+    //加载 php
+        //get
+        // $(document).click(function(){
+        //     $('#box').load('data.php?username=hello&password=444',function(res,status,xhr){
+        //         console.log(res,status,xhr);
+        //     });
+        // })
+        //post
+        // $(document).click(function(){
+        //     $('#box').load('data.php',{username:'hello',password:444},function(res,status,xhr){
+        //         console.log(res,status,xhr);
+        //     });
+        // })
+
+//$.ajax()
+    // $(document).click(function(){
+    //     console.log(2)
+    //     $.ajax({
+    //         type:'get',
+    //         url:'data.php',
+    //         async:true,
+    //         data:{
+    //                 username:'helloworld',
+    //                 password:666,
+    //         },
+    //         dataType:'json',//这里面如果是json，在php返回的时候就必须是json
+    //         //否则会出错，
+    //         success:function(res,sta,xhr){
+    //             console.log(res,sta,xhr,this);
+    //         }
+    //     });
+    // })
+
+    //  $(document).click(function(){
+    //     //console.log(2)
+    //     $.ajax({
+    //         type:'get',
+    //         url:'data.php',
+    //         async:true,
+    //         data:{
+    //                 username:'helloworld',
+    //                 password:666,
+    //         },
+    //         dataType:'text',//这里面如果是json，在php返回的时候就必须是json
+    //         //否则会出错，
+    //         success:function(res,sta,xhr){
+    //             console.log(res,sta,xhr,this);
+    //         },
+    //         //jsonp:'run',
+    //         //jsonpCallback:'success_fn',
+    //         context:$('#box')
+    //     });
+    // })
+
+//$.get（）
+        // $(document).click(function(){
+        //     $.get({
+        //     url:'data.php',
+        //         data:{
+        //             username:'helloworld',
+        //             password:666
+        //         },
+        //         success(res,sta,xhr){
+        //             console.log(res,sta,xhr);
+        //         },
+        //         dataType:'text'
+        //     })
+        // })
+//$.post()
+        // $(document).click(function(){
+        //     $.post({
+        //         url:'data.php',
+        //         data:{
+        //             username:'helloworld',
+        //             password:666
+        //         },
+        //         success(res,sta,xhr){
+        //             console.log(res,sta,xhr);
+        //         },
+        //         dataType:'text'
+        //     })
+        // })
+
+//$.getJSON();
+    // $(document).click(function(){
+    //     $.getJSON({
+    //         url:'data.php',
+    //         data:{
+    //             username:'helloworld',
+    //             password:666
+    //         },
+    //         success(res,sta,xhr){
+    //             console.log(res,sta,xhr);
+    //         }
+    //     })
+    // })
+
+
+//$.extend
+       //  var obj = {};
+       //  var obj1 = {
+       //      name:'ergou',
+       //      showname:[123]
+       //  };
+       //  var obj2 = {
+       //      age:20,
+       //      showage:function(){
+       //          console.log( this.age );
+       //      }
+       //  };
+       //  var set = $.extend(true,obj,obj1,obj2);
+       // console.log(set.showname === obj.showname);//obj和set为同一个对象。
+       // console.log(set.showname === obj1.showname);//true  特殊
+
+       // var obj = {};
+       //  var obj1 = {
+       //      name:'ergou',
+       //      showname:[123]
+       //  };
+       //  var obj2 = {
+       //      age:20,
+       //      showage:function(){
+       //          console.log( this.age );
+       //      }
+       //  };
+       //  var set = $.extend(false,obj,obj1,obj2);
+       //  console.log(obj);//{}
+       //  console.log(set);//{name: "ergou", showname: Array(1), age: 20, showage: ƒ}
+       // console.log(set.showname === obj.showname);//obj和set为同一个对象。
+       // console.log(set.showname === obj1.showname);//true  特殊
+
+
+       // var obj = {};
+       //  var obj1 = {
+       //      name:'ergou',
+       //      showname:[123]
+       //  };
+       //  var obj2 = {
+       //      age:20,
+       //      showage:function(){
+       //          console.log( this.age );
+       //      }
+       //  };
+       //  var set = $.extend(obj,obj1,obj2);
+       //  console.log(obj);//{name: "ergou", showname: Array(1), age: 20, showage: ƒ}
+       //  console.log(set);//{name: "ergou", showname: Array(1), age: 20, showage: ƒ}
+       // console.log(set.showname === obj.showname);//obj和set为同一个对象。
+       // console.log(obj.showname === obj1.showname);//true  特殊
+
+
+       // var obj = {
+       //  show:function(){
+       //      console.log(this);
+       //  }
+       // }
+       // $.extend(obj);
+
+       // $.show();//打印了$函数
+
+       var obj = {
+        showname:function(){
+            console.log(this);
+        }
+    }
+
+        $.fn.extend(obj);
+        $('#box').showname();//div#box
+    </script>
+</html>

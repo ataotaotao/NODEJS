@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+<body style="margin:50px;">
+
+    <!--
+        辅助类:
+            .text-muted
+            .text-primary
+            .text-success
+            .text-info
+            .text-warning
+            .text-danger
+                    以上几个类是给文本添加不同的颜色。表示不同的信号
+            .bg-primary
+            .bg-success
+            .bg-info
+            .bg-warning
+            .bg-danger
+                    以上几个类是给一个块添加背景色
+            .pull-left
+            .pull-right
+                    上面两个类是左右浮动
+            .center-block       将元素margin-left 和margin-right 均为auto 就是居中显示
+            .show               就是将元素display：block
+            .hidden             将元素display：none
+            .sr-only            只在屏幕阅读器上显示，其他的都隐藏
+            .close              用法如下，表示一个关闭按钮
+                    <button class="close">&times;</button>
+            .caret              下拉小按钮
+            .clearfix           清除浮动，包含浮动元素
+    -->
+    <!--<div class="container">
+        <div class="container">
+            <p class="text-muted">bootstrap framework</p>
+            <p class="text-primary">bootstrap framework</p>
+            <p class="text-success">bootstrap framework</p>
+            <p class="text-info">bootstrap framework</p>
+            <p class="text-warning">bootstrap framework</p>
+            <p class="text-danger">bootstrap framework</p>
+        </div>
+        <div class="container">
+            <p style="width:200px;height:50px;" class="pull-left bg-primary"> bootstrap framework</p>
+            <p style="width:200px;height:50px;" class="pull-left bg-success"> bootstrap framework</p>
+            <p style="width:200px;height:50px;" class="pull-left bg-info"> bootstrap framework</p>
+            <p style="width:200px;height:50px;" class="pull-left bg-warning"> bootstrap framework</p>
+            <p style="width:200px;height:50px;" class="pull-left bg-danger"> bootstrap framework</p>
+        </div>
+        <p class="pull-right" style="width:200px;height:50px;">bootstrap</p>
+        <p class="pull-left" style="width:200px;height:50px;">bootstrap</p>
+        <p class="center-block" style="width:200px;height:50px;">bootstrap</p>
+        <div class="container">
+            <p class="show">bootstrap</p>
+            <p class="hidden">boostraps framework</p>
+            <p class="sr-only">999</p>
+            <button class="btn btn-success btn-block">
+                按钮 <span class="caret"></span>
+            </button>
+            <button class="close">&times;</button>
+        </div>
+        <div class="clearfix">
+            <p class="pull-right" style="width:200px;height:50px;">bootstrap</p>
+            <p class="pull-left" style="width:200px;height:50px;">bootstrap</p>
+        </div>
+
+        <p class="" style="width:200px;height:50px;">bootstrap</p>
+        <p  style="width:200px;height:50px;">bootstrap</p>
+    </div>-->
+
+    <!--
+        响应式工具：
+            显示类：
+                visible-*-*:前面一个*表示设备的尺寸，后面一个*表示block，inline，inline-block三种类型的显示
+                    一共有12种组合。分别表示在不同的设备下显示为不同的display类型。
+            隐藏类：
+                hidden-*：这个*表示不同的设备尺寸，只有四种组合情况，表示在不同的尺寸下隐藏，注意：这个只会在当前的设备状态下隐藏
+                            在其他的状态下会显示出来。
+
+    -->
+  <!--  <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="visible-xs-block">xs-block</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="visible-sm-block">sm-block</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="visible-md-block">md-block</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="visible-lg-block">lg-block</p>
+            </div>
+        </div>
+    </div>-->
+    <!--<div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="hidden-xs">xs</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="hidden-sm">sm</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="hidden-md">md</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p class="hidden-lg">lg</p>
+            </div>
+
+        </div>
+    </div>-->
+
+    <!--
+        字体图标：
+            .glyphicon  定义了图标的公共样式，
+            .glyphicon- 用于定义图标的类型，但是必须在前面的公共类的基础上。
+    -->
+   <!-- <div class="container">
+        <span class="glyphicon glyphicon-plus"></span>
+        <span class="glyphicon glyphicon-search"></span>
+        <span class="glyphicon glyphicon-glass"></span>
+        <span class="glyphicon  glyphicon-envelope"></span>
+    </div>-->
+
+    <!--
+        下拉菜单：
+            最简单的实现：
+                第一步：将最外面的div加上dropdown 或者dropup的类名
+                第二步，在最外面的div里面加上button按钮，加上类名dropdown-toggle
+                第三步，在button里面加上一个caret下拉箭头，同时，在button里面加上js使用的data-toggle="dropdown"
+                第四步、在button后面加一个ul>li，ul加上dropdown-menu，然后里面写入li>a就好了。
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        下拉菜单
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">菜单1</a></li>
+                        <li><a href="#">菜单2</a></li>
+                        <li><a href="#">菜单3</a></li>
+                        <li><a href="#">菜单4</a></li>
+                    </ul>
+                </div>
+
+            第二种类型的下拉菜单
+                .divider                    给下拉菜单加上分隔线。
+                .dropdown-menu-right        和pull-right相同的效果，右浮动，让下拉菜单右边对齐，不过得和dropdown-menu一起使用
+                .dropdown-header            给下拉菜单添加一个title，无法hover和点击，标题不能加超链接
+                .disabled                   无法点击和hover，hover的时候显示禁用标志
+
+                .open                       初始化的时候将下拉菜单展开,给最外面的div加，没有加这个类名的时候点击展开关闭就是操作的这个类
+    -->
+
+    <div class="dropdown open">
+        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-header">头部元素</li>
+            <li><a href="#">菜单1</a></li>
+            <li><a href="#">菜单2</a></li>
+            <li class="divider"></li>
+            <li><a href="#">菜单3</a></li>
+            <li class="disabled"><a href="#">菜单4</a></li>
+        </ul>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

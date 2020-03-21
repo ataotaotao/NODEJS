@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!--
+        标签类型  h1 -- h6 .h1 -- .h6
+        强调文本  .lead
+    -->
+
+    <h1>title</h1>
+    <h2>title</h2>
+    <h3>title</h3>
+    <h4>title</h4>
+    <h5>title</h5>
+    <h6>title</h6>
+
+    <p class="lead">titles</p>
+
+    <!--
+        内联文本样式以及p的一些样式
+                mark标签和.mark有一点差距，就是字体颜色不同，mark自带黑色，.mark只能从body继承#333
+                del和s  中划线文本  ins和u  下划线文本
+                small   小号文本，副标题
+                strong 加粗
+                em 斜体
+           文本对齐的一些样式以及大小写样式  以类名展示
+                text-left  ·    左对齐
+                text-right      右对齐
+                text-center     居中对齐
+                text-justify    两端对齐
+                text-nowrap     不换行
+                text-lowercase  全部变成小写
+                text-uppercase  全部变成大写
+                text-capitalize 将首字母大写，其他的不管大小写
+        缩略语
+            <abbr title="">html</abbr>     将鼠标悬停在html上,会显示title中的文字
+            类名initialism        表示比当前的字体小一点，然后将字符大写
+        地址：
+            address     一个语义标签，用来保存地址
+        引用
+            blockquote   增加左边线 定义字体大小和内外边距
+            cite 标签，用于文字倾斜
+            类名：blockquote-reverse  可以将内容反转，对齐右边
+            在blockquote中使用一些标签和类名会让blockquote生成伪元素，作为左边最前面的--
+        浮动：
+            类名：pull-right   右浮动
+                  pull-left    左浮动
+        三大列表
+            ul  ol：
+                去除默认样式：list-unstyled
+                将子元素li设置为 inline-block ： 给ul 或者ol 添加 list-inline
+            dl：
+                设置类名 ： dl-horizontal 将dt和dd的内容横排显示
+
+
+
+    -->
+
+    <mark>bootstrap</mark>
+    <p class="mark">bootstrap</p>
+
+    <del>bootstrap</del>
+    <s>bootstrap</s>
+    <ins>bootstrap</ins>
+    <u>bootstrap</u>
+
+    <h1>bootstrap  <small>bootstrap</small></h1>
+
+    <strong>bootstrap</strong>
+    <em>bootstrap</em>
+    <p class="text-left">bootstrap</p>
+    <p class="text-center">bootstrap</p>
+    <p class="text-right">bootstrap</p>
+    <p class="text-justify">bootstrapbootstrapbootstrapbootstrap</p>
+    <p class="text-nowrap">bootstrapbootstrapbootstrapbootstrap</p>
+    <p class="text-lowercase">BOOTSTRAP</p>
+    <p class="text-uppercase">bootstrap</p>
+    <p class="text-capitalize">bootstrap</p>
+
+    <abbt title="this is my first work of bootstrap">bootstrap</abbt>
+    <abbt title="this is my first work of bootstrap" class="initialism">bootstrap</abbt>
+
+    <address>
+        <strong>Twitter, Inc.</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+    </address>
+
+    <blockquote class="blockquote-reverse">
+        bootstrap
+        <footer>
+            bootstrap
+            <cite>bootstrap</cite>
+            <small>bootstrap</small>
+        </footer>
+    </blockquote>
+    <cite>bootstrap</cite>
+    <footer>
+        bootstrap
+        <cite>bootstrap</cite>
+
+    </footer>
+
+    <!--<div class="pull-left" style="width:100px; height: 100px; background-color:green;">666</div>-->
+
+    <ul class="list-unstyled">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ol class="list-unstyled list-inline">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+    <dl class="dl-horizontal">
+        <dt>Description 1</dt>
+        <dd>Item 1</dd>
+        <dt>Description 2</dt>
+        <dd>Item 2</dd>
+    </dl>
+    <pre class="pre-scrllable" style="min-height:100px; height:100px;">
+        <p>content</p><p>content</p><p>content</p><p>content</p><p>content</p>
+        <p>content</p><p>content</p><p>content</p><p>content</p><p>content</p>
+    </pre>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

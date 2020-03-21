@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style>
+            #box{
+                width:200px;
+                height:200px;
+                border:1px solid red;
+            }
+            #box span{
+                display:block;
+                float:left;
+                width:40px;
+                height:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+    <script src='随机颜色值之十六进制.js'></script>
+    <script>
+        // var num=0;
+        // setInterval( function(){
+        //     num++;
+        //     console.log(num);
+        // },1000)
+
+        // var num=0;
+        // function fn(){
+        //     num++;
+        //     console.log(num);
+        //     return fn;
+        // }
+        // setInterval( fn(),1000);
+
+        // var num=0;
+        // var timer;
+        // timer=setInterval( run,25);
+
+        // function run(){
+        //     num +=3;
+        //     if( num==100 ){
+        //         clearInterval( timer );
+        //     }
+        //     console.log( num );
+        // }
+
+        // var num=0;
+        // var timer;
+        // timer = setInterval( run, 25 );
+
+        // function run(){
+        //     num+=3;
+        //     if( num ==501){
+        //         num=500;
+        //         clearInterval( timer );
+        //     }
+        //     console.log( num );
+        // }
+
+        // var num=0;
+        // setTimeout( function(){
+        //     num++;
+        //     console.log( num );
+        // },4000)
+
+        // var num=0;
+        // function run(){
+        //     num++;
+        //     var timer= setTimeout( run,100 );
+        //     console.log(num);
+        //     if(num ==100 ){
+        //         clearTimeout( timer );
+        //     }
+
+        // }
+        // run();
+
+        // var num=0;
+        // function run(){
+        //     num++;
+        //     if(num<100){
+        //         setTimeout( run,25 );
+        //     }
+        //     console.log(num);
+        // }
+        // run();
+
+        // var i=0;
+        // //var timer = setTimeout( run ,25 );
+
+        // function run(){
+        //     i++;
+        //     console.log( Math.random()*20 );
+        //     //setTimeout( run ,25 );
+        //     if( i<100 ){
+        //         setTimeout( run ,25 );
+        //     }
+
+        // }
+        // run();
+
+        // for( var i=0;i<100;i++){
+        //     console.log( Math.random()*5 );
+        // }
+
+        //console.log( Math.round( 2.4999) );
+
+        // var i=Math.floor( .96);
+        // console.log( i );
+
+        // var i=Math.pow( 3,2 );
+        // console.log( i
+
+        //console.log( Math.abs( 5.6 ) );
+
+            //console.log( Math.sqrt(3) );
+
+        //console.log( Math.max( 1,5,4,8,6,9,856,25,455,789));
+        //console.log( Math.min( 1,5,4,8,6,9,856,25,455,789));
+
+        // var num=0;
+        // // var timer;
+        // // timer=setTimeout(run,25);
+        // function run(){
+        //     num++;
+        //     var number= (Math.random()*100).toFixed(1);
+        //     console.log( num+':' ,number );
+        //    // setTimeout(run,25);
+        //     //return run;
+        //     if( num < 100 ){
+        //         setTimeout(run,25);
+        //     }
+        // }
+
+        // run();
+
+        // // if( num < 100 ){
+        //     setInterval(run,25);
+        // }
+        // if( num < 100 ){
+        //         clearInterval( timer );
+        //     }
+
+        // var num= Math.random()*( 90-10) +10;
+        // console.log( num );
+
+//封装取随机两个数之间的随机值。
+
+        // function random( a,b ){
+        //     var num=Math.random()*(b-a)+a;
+        //     return num;
+        // }
+
+        //console.log( random(10,100) );
+
+//随机取颜色值
+    //rgb
+        // function color(){
+        //     var arr=[];
+        //     for( var i=0;i<3;i++){
+        //         arr[i]=Math.ceil(Math.random()*255);
+        //     }
+        //     return 'rgb('+arr[0]+','+arr[1]+','+arr[2]+')';
+        // }
+
+        // console.log( color() );
+
+       //  oBox=document.getElementById('box');
+       //  for( var i=0;i<50;i++){
+       //      oBox.innerHTML += '<span style="background-color:'+color_rgb()+';">'+i+'</span>';
+       //  }
+       // oBox.style.backgroundColor=color_rgb();
+    //rgba
+        // function color_rgba(){
+        //     var arr=[];
+        //     for( var i=0;i<3;i++){
+        //          arr[i]=Math.ceil(Math.random()*255);
+        //     }
+        //     arr[3]=( Math.random() ).toFixed(1);
+        //     if( arr[3] == 0.0 ){
+        //         arr[3]=0;
+        //     }
+        //     return 'rgba('+arr[0]+','+arr[1]+','+arr[2]+','+arr[3]+')';
+        // }
+        // console.log( color_rgba() );
+
+        // var oBox=document.getElementById('box');
+        // for( var i=0;i<50;i++){
+        //     oBox.innerHTML +='<span style="background-color:'+color_rgba()+'">'+i+'</span>';
+        // }
+
+// var num=(Math.random()*255).toString(16);
+// console.log(num);
+
+    //十六进制
+    // function color_sixteen(){
+    //     var color='#';
+    //     for( var i=0;i<3;i++){
+    //         var arr=Math.ceil(Math.random()*255).toString(16);
+    //         if(arr.length > 1){//在这个函数中用字符串更好一些，因为数组只有整体才有length属性，字符串则不一样。
+
+    //         }else{
+    //             arr +=0;
+    //         }
+    //         color +=arr;
+    //     }
+    //     return color;
+    // }
+    // console.log( color_sixteen()
+    // var oBox=document.getElementById('box');
+
+    // for( var i=0;i<50;i++){
+    //     oBox.innerHTML += '<span style="background-color:'+color_sixteen()+'">'+i+'</span>';
+    // }
+
+    //console.log( (Math.PI).toFixed(100) );
+
+    //console.log( Math.sin( Math.PI/4));
+
+    var oBox=document.getElementById( 'box' );
+
+    oBox.onmousedown=function(){
+        this.style.backgroundColor='red';
+    }
+    oBox.onmouseup=function(){
+        this.style.backgroundColor='green';
+    }
+
+    </script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style>
+            .box{
+                width:100px;
+                height:100px;
+                border:1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+    <div class='box'></div>
+    <p>666</p>
+    </body>
+    <script src='js封装/jQuery简化版.js'></script>
+    <script>
+        // var obj=new Object();
+        // console.log( obj );
+
+        // var oDiv=document.getElementsByClassName('div');
+        // var obj=Object.create(oDiv);
+        // console.log( oDiv );
+
+        // var obj={};
+        // console.log( obj );
+
+        // var obj={age:18,name:'小兔子',run:function(){ console.log(2);return this}};
+        // //console.log( obj.run() );
+
+        // obj.name='taotao';
+        // obj.aaa=123;
+        // console.log( obj );
+
+        // var obj={age:18,name:'小兔子',run:function(){ console.log(2);return this}};
+        // delete obj.age;
+        // console.log( obj );
+
+        // a=2;
+        // delete window.a;
+        // console.log( window );
+
+        // var obj={1:18,2:'hello',3:'ok'};
+        // console.log( obj );
+
+        // var obj={age:18,name:'小兔子',run:function(){ console.log(2);return this}};
+        // for( var key in obj){
+            // console.log( key );
+            // console.log( obj[key] );
+
+        // var arr=[1,2,3,4,'hello','ok'];
+        // for( key in arr){
+        //     console.log( key );
+        //     console.log( arr[key] );
+        // }
+        // arr['index']=999;
+        // console.log( arr );
+        // $('.box').css( 'background-color','red').html('ok').css('line-height','50px');
+
+        // var str='{"age":20,"name":"小兔子"}';
+        // console.log( str.age );
+
+        // var obj=JSON.parse(str);
+        // console.log(obj );
+
+        // var add=JSON.stringify( obj );
+        // console.log( add );
+
+        // function fn( a,b ){
+        //     console.log( this,a,b );
+        // }.call(this,12,25);
+        //fn.call(this,12,25);
+
+        // function fn(a,b){
+        //     console.log( this,a,b);
+        // }.apply(666,[1,2]);
+
+        // function fn(a,b){
+        //     console.log( this,a,b);
+        // }
+        // fn.bind('hello')(10,20);
+        //fn(10,20);
+
+        // var fn=function(){
+        //     console.log( this );
+        // }.apply('hello');
+        //fn();
+
+        // (function(){alert(this)}.bind('ok'))();
+        // (function(){alert(this)}).bind('ok')();
+
+        // (function(a,b){console.log(this,a,b)}.bind('ok'))(12,13);
+
+        var oBox=document.getElementsByTagName('div')[0];
+        var aP=document.getElementsByTagName('p')[0];
+
+        oBox.onclick=function(){
+                this.innerHTML=777;
+        }.bind(aP);
+    </script>
+</html>

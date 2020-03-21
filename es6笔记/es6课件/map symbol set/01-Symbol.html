@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+
+            //let a = Symbol();
+            //let b = Symbol();
+            //console.dir(typeof a);
+            //console.log(a === b);
+
+           /* let a = Symbol("abc");
+            let b = Symbol("abc");
+
+            console.log(a);
+            console.log(a === b);*/
+
+            /*let a = Symbol("1");
+            let b = Symbol("2");
+
+            console.log(a || b);*/
+
+            let obj = {
+                goudan : "狗蛋",
+                name : "abc",
+                //……
+                [Symbol()] : 50
+            };
+
+            let sym = Symbol("goudan");
+
+            obj[sym] = "新增的属性";
+
+
+
+            //console.log(obj[sym]);
+
+
+            let sym2 = Symbol("goudan");
+            obj[sym2] = "第二次扩展";
+            console.log(obj);
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+<body style="height:2000px;">
+
+<!--
+    导航：
+        基础：
+            无序列表+类名nav              初始的样式为一个竖着的列表，可以hover，然后占据100%的宽度
+        添加类名：
+            .nav-tabs                   会变成一横行，然后hover也有效果,会有borde-bottom
+            .nav-pills                  胶囊型的列表导航
+            .nab-stacked                竖向的导航列表，可以和nav-pills等共用
+            .nav-justified              几个li平均分配占据一行的导航
+            .active                     选中项
+                选中项可以通过添加标签属性来进行切换
+                 <li data-toggle="tab"><a href="#">title1</a></li>
+                 这个给li添加和给a添加效果都能实现
+            .disabled                   禁用项
+        下拉菜单：
+               <ul class="nav nav-pills">
+                    <li><a href="#">title1</a></li>
+                    <li><a href="#">title2</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            title3 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">list1</a></li>
+                            <li><a href="#">list2</a></li>
+                            <li><a href="#">list3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                下拉菜单可以是nav-tabs，也可以是nav-pills
+
+-->
+   <!-- <div class="container">
+        <ul class="nav nav-tabs " >
+            <li data-toggle="tab"><a href="#">title1</a></li>
+            <li data-toggle="tab"><a href="#">title2</a></li>
+            <li data-toggle="tab" class="active"><a href="#">title3</a></li>
+        </ul>
+        <ul class="nav nav-pills">
+            <li class="disabled"><a href="#">title1</a></li>
+            <li><a href="#">title2</a></li>
+            <li><a href="#">title3</a></li>
+        </ul>
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="#">title1</a></li>
+            <li><a href="#">title2</a></li>
+            <li><a href="#">title3</a></li>
+        </ul>
+        <ul class="nav nav-pills">
+            <li><a href="#">title1</a></li>
+            <li><a href="#">title2</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    title3 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">list1</a></li>
+                    <li><a href="#">list2</a></li>
+                    <li><a href="#">list3</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Project</a></li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Message <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="">关于</a></li>
+                    <li><a href="">资讯</a></li>
+                    <li><a href="">通讯</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>-->
+
+<!--
+    导航条
+        基础设置：
+            向 <nav> 标签添加 class .navbar、.navbar-default
+        基础结构：
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">content</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="">Home</a></li>
+                        <li><a href="">Project</a></li>
+                    </ul>
+                </div>
+            </nav>
+        可以向里面加入其它的元素
+        响应式导航栏：
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#list">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse list" id="list">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">iOS</a></li>
+                        <li><a href="#">SVN</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                按钮<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">list1</a></li>
+                                <li><a href="#">list2</a></li>
+                                <li><a href="#">list3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            注意：在前面一个data-target里面，如果下面的collapse里面写的是id名，那么前面data-target里面就写入
+            #+id，如果是类名，那么就写上.+类名。两者均可以。
+        导航栏里面的表单：
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <button class="btn btn-default">按钮</button>
+                </form>
+            .navbar-form            对navbar中的表单进行初始化。
+            .navbar-right           在navbar里面右浮动
+            .navbar-left            在navbar里面左浮动
+
+        navbar中的按钮
+            <button class="btn btn-default navbar-btn">bootstrap</button>
+            .navbar-btn             对表单按钮进行navbar化
+
+        navbar中的文本
+            <p class="navbar-text">textwenben</p>
+            .navbar-text            navbar中的文本
+        navbar的固定：
+            .navbar-fixed-top       固定定位到顶部
+                固定到顶部会有一定的问题，会挡住下面的一部分元素，可以给下面的元素添加margin或者padding。
+            .navbar-fixed-buttom    固定定位到底部
+            .navbar-static-top      静态的定位到顶部    在顶部，但是可以随着滚动条的滚动而滚动
+            .navbar-inverse         反色的导航栏
+
+
+-->
+    <!--<div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">content</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">Project</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>-->
+    <!--<div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#list">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse list" id="list">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">iOS</a></li>
+                    <li><a href="#">SVN</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            按钮<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">list1</a></li>
+                            <li><a href="#">list2</a></li>
+                            <li><a href="#">list3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <button class="btn btn-default">按钮</button>
+                </form>
+                <button class="btn btn-default navbar-btn">bootstrap</button>
+                <p class="navbar-text">textwenben</p>
+            </div>
+        </nav>
+        <div class="top">
+            <p>list 1</p>
+            <p>list 2</p>
+            <p>list 3</p>
+            <p>list 4</p>
+            <p>list 5</p>
+            <p>list 6</p>
+            <p>list 7</p>
+            <p>list 8</p>
+            <p>list 9</p>
+            <p>list 10</p>
+        </div>
+    </div>-->
+<!--
+    面包屑导航：
+        <ul class="breadcrumb">
+            <li><a href="#">content</a></li>
+            <li><a href="#">content</a></li>
+            <li class="active">names</li>
+        </ul>
+        最后一个不用超链接标签，直接active
+
+-->
+    <ul class="breadcrumb">
+        <li><a href="#">content</a></li>
+        <li><a href="#">content</a></li>
+        <li class="active">names</li>
+    </ul>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

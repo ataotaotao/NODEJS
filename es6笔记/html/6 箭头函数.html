@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+    </head>
+    <body>
+
+        <script>
+
+            // let a = ()=>'ok';
+            // console.log( a() );// ok
+
+
+            // let a = x => x;
+            // console.log( a(5) ); // 5
+
+            // let a = ( x, y) => ({x:1,y:2});
+            // console.log( a( 12,34 ));
+
+            // let a = ()=>{
+            //     console.log(this);
+            // };
+
+            // document.onclick = a;//window
+
+
+            // let a = (...res) =>{
+            //     console.log( res );//error
+            // }
+
+            // a();
+
+
+            // var arr = [1,2,3,4,5];
+
+            // arr.forEach( (value,index,arr) => {
+            //     console.log(this)
+            //     console.log(value);
+            //     console.log(index);
+            //     console.log( arr);
+            // },{x:1,y:3});
+
+
+            // var json = {
+            //     0:1,
+            //     1:2,
+            //     length : 2
+            // };
+
+            // var arr = Array.from( json );
+            // console.log(arr) //[1,2]
+
+
+            // var arr = [1,2,3,4,5];
+
+            // var result = Array.from( arr ,function(value,index){
+            //     console.log(value,index);
+            //     return value * 2;
+            // });
+
+            // console.log( result );//[2, 4, 6, 8, 10]
+
+
+            // console.log( [NaN,1,2,3,4].includes( undefined + 1 ) );//true
+
+            // let arr = [1,2,3,4,5];
+
+            // let index = arr.find(function(value,index,arr){
+            //     console.log(value,index,arr)
+            // });
+
+
+            // var arr = [1,2,3,4,5,6,7];
+
+            // arr.copyWithin( 3,0,6 );
+            // console.log(arr);//[1, 2, 3, 1, 2, 3, 4]
+
+
+            /*let name = 'ergou';
+
+            let obj = { name ,
+                b(){
+                    console.log('ok')
+                }
+            };
+            console.log(obj)//{name: "ergou"}
+            obj.b();*/
+
+
+            // let a = "name";
+            // var obj = {
+            //     [a]:"ergou"
+            // };
+            // console.log(obj);//{name: "ergou"}
+
+
+            // let a = {x:1};
+            // let b = {y:2};
+            // Object.defineProperty( b, "age",{
+            //     value:'ok',
+            //     enumerable:false
+            // });
+
+            // let obj = Object.assign( a,b );
+            // console.log(obj)
+
+
+            // function Clone(obj){
+            //     for (var key  in obj) {
+            //         //不是一个对象
+            //         if( !obj.hasOwnProperty )return;
+            //         if( typeof obj[key] === "object" ){
+            //             this[key] = new Clone(obj[key]);
+            //         }else{
+            //             this[key] = obj[key];
+            //         }
+            //     }
+            // }
+
+            // let json = {
+            //     index:{
+            //         age:20
+            //     },
+            //     name:3
+            // };
+            // var arr = new Clone(json);
+
+            // console.log(arr.index === json.index);//false
+
+
+            function Fn(name,age,index){
+                this.name = name;
+                this.age = age;
+                this.index=  index;
+                //可以写作：
+                Object.assign(this,{name,age,index});
+            }
+
+
+            Object.assign( Fn.prototype,{
+                name:function(){}
+            });
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

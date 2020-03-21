@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+    </head>
+    <body>
+            <button id='btn'>ok</button>
+           <script>
+                btn.onclick = function(){
+                   var xhr;
+                   if(window.XMLHttpRequest){//标准
+                        xhr = new XMLHttpRequest();
+                   }else{
+                        try{//ie低版本
+                            xhr = new ActiveXObject('Msxml.XMLHTTP.6.0');
+                        }catch(e){//ie更低版本
+                            xhr = new ActiveXObject('Msxml.XMLHTTP.3.0');
+                        }
+                   }
+                   //console.log(xhr);
+
+
+                   xhr.open('post','php_json.php',true);
+
+                   xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+
+                   xhr.send('username=helloworld&password=888');
+
+
+                   xhr.onreadystatechange = function(){
+                    if(this.readyState == 4){
+                        if(this.status == 200){
+                            var date = JSON.parse( xhr.responseText );
+                            console.log( date );
+                        }
+                    }
+
+
+                }
+
+
+           }
+           </script>
+    </body>
+</html>

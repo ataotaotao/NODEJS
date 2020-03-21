@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style>
+            form{
+                display:block;
+                width:400px;
+                margin:auto;
+            }
+            ul{
+                list-style:none;
+                width:400px;
+                padding:20px;
+                border:1px solid red;
+                margin:50px auto;
+            }
+            li{
+                width:400px;
+                height:80px;
+                background-color:green;
+                margin:10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <form action="">
+            <input type="text">
+            <input type="password">
+            <input type="submit">
+            <input type="reset">
+        </form> -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </body>
+    <script src='../js封装/ready.js'></script>
+    <script>
+        var oUl = document.getElementsByTagName('ul')[0];
+        var aLi = oUl.getElementsByTagName('li');
+        // var form = document.getElementsByTagName('form')[0];
+        // var input = document.getElementsByTagName('input')[0];
+        // console.log(input)
+
+
+        // input.onfocus = function(){
+        //     console.log(1);
+        // }
+
+        // input.focus();
+
+        // setTimeout(function(){
+        //     input.blur();
+        // },5000);
+
+        // form.onsubmit =function(){
+        //     return false;
+        // }
+
+        // setTimeout(function(){
+        //     form.submit();
+        // },2000)
+
+        // form.onreset = function(){
+        //     return false;
+        // }
+
+
+        // setTimeout(function(){
+        //     form.submit();
+        // },5000)
+
+
+        // input.onchange =function(){
+        //     alert(1);
+        // }
+
+        // for(var i=0;i<aLi.length;i++){
+        //     aLi[i].onclick = function(){
+        //         this.style.backgroundColor = 'red';
+        //     }
+        // }
+
+        // oUl.onclick = function(e){
+        //     e = e || window.event;
+        //     e.target = e.target || e.srcElement;
+        //     e.target.style.backgroundColor = 'red';
+        // }
+
+        // var li = document.createElement('li');
+        // li.innerHTML = '666';
+        // oUl.appendChild(li);
+
+
+
+        // ready(function(){
+        //     console.log('ok');
+        // });
+
+        // function ready(fn){
+        //     if(document.addEventListener){
+        //         document.addEventListener('DOMContentLoaded',function(){
+        //             fn();
+        //             document.removeEventListener('DOMContentLoaded',arguments.callee,false);
+        //         },false);
+        //     }else{
+        //         document.attachEvent('onreadystatechange',function(){
+        //             if(document.readyState == 'complete'){
+        //                 fn();
+        //                 document.detachEvent('onreadystatechange',arguments.callee);
+        //             }
+        //         })
+        //     }
+        // }
+
+        // function fn(){
+        //     console.log(arguments.callee);
+
+        // }
+        // fn();//打印结果为这个函数
+
+
+        // document.onkeydown = function(){
+        //     console.log(1);
+        // }
+        // document.onkeyup = function(){
+        //     console.log(2);
+        // }
+        // document.onkeypress = function(){
+        //     console.log(3);
+        // }
+        // document.onkeydown = function(e){
+        //     console.log(e.ctrlKey);
+        // }
+
+
+
+    </script>
+</html>

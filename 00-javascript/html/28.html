@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+        <style type="text/css">
+            body{
+                margin:0;
+                padding:0;
+            }
+            #box{
+                position:absolute;
+                left:0;
+                top:0;
+                width:100px;
+                height:100px;
+                background-color:green;
+            }
+          </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+    <script>
+        // function createP(name,age){
+        //     return {
+        //         name:name,
+        //         age:age
+        //     };
+        // }
+        // var a = createP("二狗",20);
+        // console.log(a);//{name: "二狗", age: 20}
+
+        // function createP(name,age){
+        //     var obj = {};       //原料
+        //     obj.name = name;    //加工
+        //     obj.age = age;
+        //     return obj;         //出产
+        // }
+        // var a = createP('ergou',20);
+        // console.log(a);//{name: "ergou", age: 20}
+
+
+        // function CreateP(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // var a = new CreateP('ergou',20);
+        // //console.log(a);//CreateP {name: "ergou", age: 20}
+        // console.log(a.constructor);
+
+
+        // var obj = {};
+        // console.log(obj.constructor);//ƒ Object() { [native code] }
+
+        // var a = function(){
+
+        // }
+        // console.log(a.constructor);
+
+        // function A(name,age,sex){
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = sex;
+        // }
+        // var a = new A('二狗',20,'female');
+
+        // function B(name){
+        //     this.name = name;
+        // }
+
+        // var b = new B('旺财');
+        // console.log( a instanceof A);//true
+        // console.log( b instanceof A);//false
+        // console.log( b instanceof B);//true
+
+
+        // var a = {name:"二狗",age:20};
+        // var b = a;
+        // b.name = "旺财";
+        // console.log(a);//{name: "旺财", age: 20}
+
+
+        // var c = 5;
+        // var d = c;
+        // d = 7;
+        // console.log(c);//5
+
+        // function C(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        //     this.show = function(){
+        //         console.log(this);
+        //     }
+        // }
+        // var a = new C("二狗",20);
+        // var b = new C("旺财",30);
+        // console.log( a.show === b.show );//false;
+        //a.show();
+
+
+        // function C(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        // }
+
+        // C.prototype.show = function(){
+        //     console.log(this);
+        // }
+        // var a = new C("二狗",20);
+        // var b = new C("旺财",30);
+        // console.log( a.show === b.show );//true
+
+        // function C(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // C.prototype.show = function(){
+        //     console.log(this);
+        // }
+        // var p = new C('二狗',20);
+        // console.log(p);
+        //p.show();//报错，这不是一个函数
+        //console.log(C.prototype);
+
+
+        var oBox = document.getElementById('box');
+
+    //拖拽一般
+        oBox.onmousedown = function(e){
+            var init_x = oBox.offsetLeft;
+            var init_y = oBox.offsetTop;
+            var clientX = e.clientX;
+            var clientY = e.clientY;
+
+            //移动
+            document.onmousemove = function(e){
+                var moveX = e.clientX - clientX;
+                var moveY = e.clientY - clientY;
+
+                oBox.style.left = init_x + moveX +'px';
+                oBox.style.top = init_y + moveY + 'px';
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+
+            return false;
+        }
+    </script>
+</html>

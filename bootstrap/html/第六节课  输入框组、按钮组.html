@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+<body style="margin:50px;">
+
+<!--
+    按钮组：
+        .btn-group          将按钮组合在一起，四周圆角
+        .btn-toolbar        将几个按钮组组合在一起，形成一个按钮工具栏
+        .btn-group-*        *表示几种设备的不同，xs表示超小，sm表示小号，md也可以不写，表示中等，lg表示大号，
+                                这个都基于btn-group，没有btn-group的话无法实现效果。
+        .btn-group-vertical 让水平显示的按钮垂直显示
+        btn-group嵌套下拉菜单：    就是在btn-group里面再添加btn-group，然后下拉菜单的结构和以前的一样。
+                <div class="btn-group">
+                    <button class="btn btn-default">1</button>
+                    <button class="btn btn-default">2</button>
+                    <div class="btn-group">
+                        <button class="btn btn-default btn-lg " data-toggle="dropdown"><span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">菜单1</a></li>
+                            <li><a href="#">菜单1</a></li>
+                            <li class="divider"></li>
+                            <li class="disabled"><a href="#">菜单1</a></li>
+                        </ul>
+                    </div>
+                </div>
+        若想上拉，则可以在btn-group里面加入dropup
+        也可以让嵌套下拉菜单的按钮组垂直排列
+        按钮组横向占据所有空间，平均分配
+                <div class="btn-group btn-group-justified">
+                    <a class="btn btn-success">按钮</a>
+                    <a class="btn btn-success">按钮</a>
+                    <a class="btn btn-success">按钮</a>
+                    <a class="btn btn-success">按钮</a>
+                </div>
+                或者：让每一个按钮单独的变成一个组
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button class="btn btn-success">按钮</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-success">按钮</button>
+                    </div>
+                </div>
+
+
+
+-->
+<div class="container">
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+            <button class="btn btn-success">按钮</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-success">按钮</button>
+        </div>
+    </div>
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+            <button class="btn btn-success">按钮</button>
+        </div>
+    </div>
+    <div class="btn-group-vertical">
+        <button class="btn btn-success">按钮</button>
+        <button class="btn btn-success">按钮</button>
+        <button class="btn btn-success">按钮</button>
+        <button class="btn btn-success">按钮</button>
+    </div>
+</div>
+<div class="container">
+    <div class="btn-group-vertical">
+        <button class="btn btn-default">1</button>
+        <button class="btn btn-default">2</button>
+        <div class="btn-group dropdown">
+            <button class="btn btn-default btn-lg " data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">菜单1</a></li>
+                <li><a href="#">菜单1</a></li>
+                <li class="divider"></li>
+                <li class="disabled"><a href="#">菜单1</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--
+    输入框组：
+            向 .form-control 添加前缀或后缀元素的步骤如下：
+                将前缀或者后缀放在一个.input-group的盒子里面，
+                在span.input-group-addon里面放入额外加入的前缀后者后缀。
+                然后将这个元素放在输入框的前面或者后面即可
+            最基本的组合：
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control" />
+                    <span class="input-group-addon">$</span>
+                </div>
+
+            .input-group-*      这个类名用来控制输入框组的大小，有lg sm  xs的选择
+
+            在里面放入复选框和单选框：
+                <span class="input-group-addon"><input type="radio"></span>
+
+            将按钮作为前缀或者后缀：
+                做的修改：将button元素放在span里面，然后span的类名从input-group-addon改为input-group-btn
+                    <span class="input-group-btn"><button class="btn btn-success">666</button></span>
+            将下拉菜单按钮作为前缀或者后缀：
+                做的修改：将下拉菜单里面的组件放在span.input-group-btn里面，然后就可以使用了。
+
+            将下拉菜单的箭头和字体按钮分开，然后和input组合：
+                在原来一个按钮的位置再加一个按钮，然后将需要的内容加到第二个按钮里面，进行操作。
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">按钮</button>
+                            <button class="btn btn-default" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">按钮1</a></li>
+                                <li><a href="#">按钮1</a></li>
+                                <li><a href="#">按钮1</a></li>
+                            </ul>
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+
+-->
+<div class="container">
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" />
+        <span class="input-group-addon">$</span>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="checkbox">
+        </span>
+    <input type="text" class="form-control" />
+    <span class="input-group-addon">
+            <input type="radio">
+        </span>
+</div>
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn btn-success" data-toggle="dropdown">按钮<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+                </ul>
+        </span>
+        <input type="text" class="form-control" />
+        <span class="input-group-btn">
+            <button class="btn btn-success" data-toggle="dropdown">按钮<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+                </ul>
+        </span>
+    </div>
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn btn-default">按钮</button>
+            <button class="btn btn-default" data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+                <li><a href="#">按钮1</a></li>
+            </ul>
+        </span>
+        <input type="text" class="form-control">
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

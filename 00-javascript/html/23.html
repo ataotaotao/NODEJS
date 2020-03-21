@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href=" " rel="stylesheet">
+    </head>
+    <body>
+    <input type="text" value = 'ok' name = 'myname'>
+    </body>
+    <script src='setCookieMore.js'></script>
+    <script src='getCookie1.js'></script>
+    <script src='getCookie2.js'></script>
+    <script src='removeCookie.js'></script>
+    <script>
+        // var inp = document.getElementsByTagName('input')[0];
+        // document.cookie=inp.name+" = "+inp.value;
+        // console.log(document.cookie);
+
+        setCookieMore({
+            name:'二狗',
+            value:'好多',
+            age:25
+        },10);
+        //console.log(document.cookie);
+
+        // var d= getCookie('age','value','nice');
+        // console.log(d);
+        removeCookie('name');
+        console.log(document.cookie);
+
+        // var str = 'name=value';
+        // var reg = /\bname=(\w+)\b/;
+        //console.log(reg.exec(str));
+
+    </script>
+</html>
