@@ -1,0 +1,160 @@
+@charset  "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+i{
+    font-style: normal;
+}
+.clearfix:after{
+    display:block;
+    
+    clear:both;
+    content:"";
+}
+body{
+    background-color:rgba(0,0,0,.8);
+}
+ul{
+    list-style: none;
+}
+#box{
+    width:940px;
+    margin:0 auto;
+}
+.title{
+    background-color:white;
+    color:black;
+    font-size:25px;
+    text-indent:25px;
+    line-height:120px;
+}
+#box .type{
+    height:120px;
+    line-height:120px;
+    color:white;
+    font-size:25px;
+}
+#box .type ul{
+    width:900px;
+    height:120px;
+    padding:0 20px;
+    text-indent:20px;
+    border-bottom:1px solid #aaa;
+}
+#box .type ul li i{
+    display:inline-block;
+    width:60px;
+    height:40px;
+    vertical-align: middle;
+}
+#box .type ul li{
+    float:left;
+    margin-right:50px;
+}
+#box .type ul li span{
+    display:inline-block;
+    vertical-align: middle;
+}
+#box .type ul li:nth-child(1) i{
+    background-color:white;
+}
+#box .type ul li:nth-child(2) i{
+    background-color:red;
+}
+#box .type ul li:nth-child(3) i{
+    background-color:blue;
+}
+
+#box .screen{
+    width:313px;
+    height:60px;
+    font-size:0;
+    margin:0 auto 90px;
+}
+#box .screen img{
+    display:inline-block;
+    width:313px;
+    height:60px;
+    margin-top:-2px;
+}
+#box .seat{
+    margin-bottom:35px;
+    border-bottom:1px solid #aaa;
+}
+#box .seat span{
+    display:block;
+    float:left;
+    width:60px;
+    height:40px;
+    background-color:white;
+    margin-right:10px;
+    margin-bottom:55px;
+}
+
+
+#box .seat .selected{
+    background-color:red;
+}
+#box .seat .chose{
+    background-color:blue;
+}
+#box .seat .first{
+    margin-left:35px;
+}
+#box .seat .four{
+    margin-right:150px;
+}
+
+.chose-seat{
+    margin-bottom:250px;
+}
+.chose-seat h3{
+    text-indent:40px;
+    font-size: 25px;
+    color:#fff;
+}
+.chose-seat .chose {
+    margin-top:15px;
+}
+.chose-seat .chose span{
+    display:inline-block;
+    width:150px;
+    height:60px;
+    margin:15px;
+    color:#cfa972;
+    font-size:25px;
+    text-align:center;
+    line-height:60px;
+    border:1px solid #cfa972;
+    border-radius:5px;
+}
+
+
+#box .total{
+    position: fixed;
+    bottom:0;
+    width:900px;
+    height:100px;
+    padding-left:40px;
+    line-height:100px;
+    background-color:#666;
+}
+#box .total p{
+    float:left;
+    width:320px;
+    height:100%;
+    font-size:30px;
+    color:#999;
+}
+#box .total .sure{
+    float:right;
+    width:400px;
+    background-color:#c1a55f;
+    color:#333;
+    text-align:center;
+    user-select:none;
+    cursor:pointer;
+}
+

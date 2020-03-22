@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+i {
+  font-style: normal;
+}
+body {
+  background-color: #eee;
+}
+#box {
+  width: 10rem;
+}
+#box .back {
+  height: 0.83333333rem;
+  background-color: #f40;
+  line-height: 0.83333333rem;
+  font-size: 0.74074074rem;
+  color: #fff;
+  text-indent: 0.27777778rem;
+}
+#box .img {
+  width: 8.7037037rem;
+  height: 8.7037037rem;
+  margin: 0.18518519rem auto 0;
+}
+#box .img img {
+  width: 100%;
+  height: 100%;
+}
+#box .description {
+  padding: 0.18518519rem 0.27777778rem;
+  font-size: 0.46296296rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  display: -webkit-box-flex;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#box .price {
+  font-size: 0.83333333rem;
+  color: red;
+  margin-bottom: 0.27777778rem;
+}
+#box .count {
+  margin-bottom: 0.37037037rem;
+  color: red;
+}
+#box .count .less,
+#box .count .add {
+  display: inline-block;
+  width: 1.11111111rem;
+  height: 1.11111111rem;
+  text-align: center;
+  font-size: 1.11111111rem;
+  line-height: 1.11111111rem;
+  color: black;
+  vertical-align: middle;
+  background-color: buttonface;
+}
+#box .count i {
+  font-size: 0.64814815rem;
+}
+#box .pay {
+  width: 100%;
+  height: 2.40740741rem;
+  background-color: #bbb;
+  line-height: 2.40740741rem;
+}
+#box .pay h3 {
+  float: left;
+  width: 5.55555556rem;
+  text-align: center;
+  color: blueviolet;
+}
+#box .pay .total {
+  float: left;
+  width: 4.44444444rem;
+  background-color: #F40;
+  color: #fff;
+  text-indent: 0.46296296rem;
+}
